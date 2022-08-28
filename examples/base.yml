@@ -63,4 +63,4 @@ cursor:
   style:
     shape: Block
 
-# The theme will appear below this comment.
+# The theme config will appear below this comment, it will supersede your changes if you already set them above
