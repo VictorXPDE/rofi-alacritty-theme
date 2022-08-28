@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# *********************************
+# Rofi theme selector for alacritty
+# Made by VictorXPDE 08/22/2022
+#
+# Released in public domain
+# *********************************
+
+rofi_cmd() {
+    rofi -dmenu -p "Select"
+}
+
+theme_path=$HOME/.config/alacritty/themes
+cfg_path=$HOME/.config/alacritty
+theme=$(/bin/ls $theme_path | rofi_cmd)
+
+cat $cfg_path/base.yml $theme_path/$theme > $cfg_path/alacritty.yml
